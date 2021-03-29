@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlController.FXMLGestaoAlunoController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="-12.0" layoutY="2.0" prefHeight="372.0" prefWidth="316.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="17.0" layoutY="550.0" prefHeight="46.0" prefWidth="234.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button fx:id="btnEditAluno" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btEditAluno" text="Editar" />
+                        <Button fx:id="btnNewAluno" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btNewAluno" text="Novo" />
+                        <Button fx:id="btnDeleteAluno" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteAlunoAction" text="Deletar" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <ListView fx:id="lvAlunos" layoutX="35.0" layoutY="114.0" onMouseClicked="#atualiza" prefHeight="516.0" prefWidth="234.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                  <Label layoutX="94.0" layoutY="5.0" text="Alunos">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="391.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="4.0" text="Gestão de Aluno" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <GridPane hgap="30.0" layoutX="9.0" layoutY="89.0" prefHeight="93.0" prefWidth="375.0" vgap="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="16.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <VBox prefHeight="60.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Nome">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblNome" text="Label" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label text="Matrícula">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblMatricula" text="Label" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Cpf">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblCpf" text="Label" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="60.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label text="Curso">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label fx:id="lblCurso" text="Label" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding>
+                  </GridPane>
+                  <Label layoutX="304.0" layoutY="582.0" text="Endereço">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="447.0" layoutY="532.0" prefHeight="68.0" prefWidth="108.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="btnReturn" mnemonicParsing="false" onAction="#btNavigateSelecao" text="Voltar" />
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <VBox alignment="CENTER_LEFT" layoutX="278.0" layoutY="266.0" prefHeight="200.0" prefWidth="206.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="btnAddDisciplina" mnemonicParsing="false" onAction="#btNewDisciplina" prefHeight="26.0" prefWidth="170.0" text="Adicionar Disciplina" />
+                        <Button fx:id="btnRemoveDisciplina" mnemonicParsing="false" onAction="#DeleteDisciplinaAction" prefHeight="26.0" prefWidth="170.0" text="Remover Disciplina" />
+                     </children>
+                  </VBox>
+                  <ListView fx:id="lvDisciplinas" layoutX="47.0" layoutY="266.0" prefHeight="244.0" prefWidth="236.0" AnchorPane.leftAnchor="20.0" />
+                  <Label layoutX="53.0" layoutY="247.0" text="Disciplinas Matriculadas">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

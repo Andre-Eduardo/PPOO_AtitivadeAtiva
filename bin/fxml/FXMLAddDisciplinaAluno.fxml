@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlController.FXMLAddDisciplinaAlunoController">
+   <children>
+      <HBox alignment="CENTER" layoutX="100.0" layoutY="369.0" prefHeight="57.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#btAddDisciplina" text="Adicionar" />
+
+            <Button fx:id="btnReturn" mnemonicParsing="false" onAction="#btReturn" text="Voltar" />
+         </children>
+      </HBox>
+      <ListView fx:id="lvDisciplinas" layoutX="70.0" layoutY="48.0" prefHeight="305.0" prefWidth="267.0" />
+      <Label layoutX="120.0" layoutY="14.0" text="Disciplinas disponiveis">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

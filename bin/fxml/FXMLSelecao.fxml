@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlController.FXMLSelecaoController">
+   <children>
+      <HBox layoutY="112.0" prefHeight="177.0" prefWidth="657.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/teacher.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="200.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/student.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/book_learning_notebook_reading_study_icon_127253.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="80.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="12.0" layoutY="274.0" prefHeight="100.0" prefWidth="633.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="btnProfesssor" mnemonicParsing="false" onAction="#btNavigateProfessor" text="Professores" wrapText="true" />
+            <Button fx:id="btnAluno" mnemonicParsing="false" onAction="#btNavigateAluno" text="Alunos" wrapText="true">
+               <HBox.margin>
+                  <Insets left="155.0" />
+               </HBox.margin></Button>
+            <Button fx:id="btnDisciplina" mnemonicParsing="false" onAction="#btNavigateDisciplina" text="Disciplinas/cursos">
+               <HBox.margin>
+                  <Insets left="120.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="45.0" />
+         </padding>
+      </HBox>
+      <Label layoutX="180.0" layoutY="36.0" text="Escolha oque deseja gerenciar " textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
